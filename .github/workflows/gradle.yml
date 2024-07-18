@@ -72,12 +72,7 @@ jobs:
           cp -r src/main/resources/static/js/* public/js/
           cp -r src/main/resources/static/css/* public/css/
           cp -r src/main/resources/static/img/* public/img/
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: static-files
-          path: public
+          cp -r src/main/resources/templates/* public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
